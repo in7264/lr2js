@@ -1,0 +1,52 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>JavaScript DES Example</title>
+  <script src="index.js"></script>
+</head>
+<body>
+<form name="stuff">
+  <table>
+    <tbody>
+      <tr>
+        <td valign="top">Message</td>
+        <td><input type="text" name="indata" size="25"><br>
+        <input type="radio" name="intype">ASCII</input>
+        <input type="radio" name="intype" checked="checked">Hexadecimal</input> </td>
+      </tr>
+      <tr>
+        <td>DES Key/Triple DES Key Part A</td>
+        <td><input type="text" name="key" value="3b3898371520f75e" size="25"></td>
+      </tr>
+      <tr>
+        <td>Triple DES Key Part B</td>
+        <td><input type="text" name="keyb" value="922fb510c71f436e" size="25"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+            <input type="button" value="DES Encrypt" onclick="do_des(true);">
+            <input type="button" value="DES Decrypt" onclick="do_des(false);"><br>
+            <input type="button" value="Triple DES Encrypt" onclick="do_tdes(true);">
+            <input type="button" value="Triple DES Decrypt" onclick="do_tdes(false);"> </td>
+      </tr>
+      <tr>
+        <td valign="top">Output message</td>
+        <td><input type="text" name="outdata" size="20"><br>
+        <input type="radio" name="outtype" onclick="format_DES_output();">ASCII</input>
+        <input type="radio" name="outtype" checked="checked" onclick="format_DES_output();">
+		Hexadecimal</input>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<!--<i>10/27/06: I have decided to not allow the key to changed to reduce the chance of
+this page being used to solve homework problems</i>-->
+  <hr>
+Details:<br>
+  <textarea name="details" id="details" rows="25" cols="90"></textarea>
+</form>
+<hr>
+
+</body>
+</html>
